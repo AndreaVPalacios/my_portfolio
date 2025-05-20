@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import NavbarVertical from "@/components/navbar/navbar";
 
 export const metadata: Metadata = {
   title: "Andrea Palacios - Portfolio",
@@ -13,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="relative">
+        <NavbarVertical />
+        <main className="ml-16 md:ml-20">{children}</main>
+      </body>
     </html>
   );
 }
